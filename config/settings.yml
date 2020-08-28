@@ -8,3 +8,13 @@ links:
     screencast: https://www.learnenough.com/courses
     ruby_on_rails: https://rubyonrails.org/
     contact_page: https://www.railstutorial.org/contact
+  gravatar: https://secure.gravatar.com/avatar/
+
+validations:
+  name:
+    max_length: 50
+  email:
+    max_length: 225
+    regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i'
+  password:
+    min_length: 6
