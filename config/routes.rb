@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   scope "(:locale)", locale: /en|jp/ do 
     root "static_pages#home"
 
@@ -7,6 +9,8 @@ Rails.application.routes.draw do
     get "/contact", to: "static_pages#contact"
     get "/signup", to: "users#new"
     get "/login", to: "sessions#new"
+    post "/login", to: "sessions#new"
+    delete "/logout", to: "sessions#destroy"
     resources :users
   end
 end
