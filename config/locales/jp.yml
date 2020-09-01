@@ -15,13 +15,17 @@ jp:
       help_header: "Help"
       home_header: "Home"
       login_header: "Log in"
+      users_header: "Users"
+      account_header: "Account"
+      profile_header: "Profile"
+      setting_header: "Settings"
+      logout_header: "Log out"
 
   ruby_on_rails: "Ruby on Rails"
   ruby_on_rails_home: "Ruby on Rails Tutorial"
   ruby_on_rails_help: "Rails Tutorial Help Page"
   ruby_on_rails_book: "Ruby on Rails Tutorial book"
   ruby_on_rails_tut_author: "Michael Hartl"
-
   static_pages:
     home:
       home_title: "Home" 
@@ -49,12 +53,30 @@ jp:
       screen: "screencast series"
     contact:
       contact_title: "Contact"
-      description_title: "Contact the Ruby on Rails Tutorial about the sample app at the"
       heading: "Contact"
-      ruby_on_rails_contact: "contact page."
+      contact_desc: "Contact the Ruby on Rails Tutorial about this sample app at"
+      ruby_on_rails_contact: "contact page"
 
   users:
+    user_not_found: "User not found"
     new:
       sign_up_title: "Sign Up"
       heading: "Sign Up"
       description_title: "This will be a sign up page for new users."
+      sign_up_create: "Create my account"
+      confirmation: "Confirmation"
+    create:
+      success_mess_create: "Welcome to Sample App!"
+      fail_mess_create: "Account created fail !!!"
+    
+  sessions:
+    new:
+      login_title: "Log In"
+      heading: "Log In"
+    create:
+      fail_mess_session: "INVALID email or password combination !"
+    newform:
+      login: "Login"
+      btn_signup: "New User ?"
+      signup_now: "Sign Up Now!"
+      remember_user: "Remember me in this computer"
