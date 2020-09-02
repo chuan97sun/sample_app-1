@@ -1,14 +1,16 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to "sample app", "#", id: "logo" %>
+    <%= link_to t(".logo"), root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Help", help_path %></li>
+        <li><%= link_to t(".home_header"), root_path %></li>
+        <li><%= link_to t(".help_header"), help_path %></li>
+
         <% if logged_in? %>
           <li><%= link_to t(".users_header"), "#" %><li>
           <li class="dropdown">
-            <%= link_to "#", {class: "dropdown-toggle", data: { "toggle" => "dropdown"}} do %>
+            
+            <%= link_to "#", {class: "dropdown-toggle", data: {"toggle" => "dropdown"}} do %>
               <%= t ".account_header" %> 
               <b class="caret"></b>
             <% end %>
@@ -25,6 +27,7 @@
         <% else %>
           <li><%= link_to t(".login_header"), login_path %></li>
         <% end %>
+
         <li><%= link_to "English", root_path(locale: :en) %></li>
         <li><%= link_to "Japanese", root_path(locale: :jp) %></li>
       </ul>

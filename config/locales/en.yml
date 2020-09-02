@@ -75,7 +75,8 @@ en:
       heading: "Log In"
     create:
       fail_mess_session: "INVALID email or password combination !"
-    _newform:
+    newform:
       login: "Login"
       btn_signup: "New User ?"
       signup_now: "Sign Up Now!"
+      remember_user: "Remember me in this computer"
