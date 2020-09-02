@@ -1,7 +1,8 @@
 class User < ApplicationRecord
   attr_accessor :remember_token
-
   USERS_PARAMS = %i(name email password password_confirmation).freeze
+
+  scope :sort_by_name, ->{order name: :asc}
   
   validates :name, presence: true,
     length: { maximum: Settings.validations.name.max_length }
@@ -12,17 +13,11 @@ class User < ApplicationRecord
     uniqueness: { case_sensitive: true }
 
   validates :password, presence: true,
-    length: { minimum: Settings.validations.password.min_length }
+    length: { minimum: Settings.validations.password.min_length }, allow_nil: true
 
   has_secure_password
 
   before_save :downcase_email
-
-  private 
-
-  def downcase_email
-    email.downcase!
-  end
 
   class << self
     def digest string
@@ -41,7 +36,7 @@ class User < ApplicationRecord
     update_attribute :remember_digest, User.digest(remember_token)
   end
 
-  def authenticated? remember_token
+  def authenticated? attribute, token
     return false unless remember_digest
     BCrypt::Password.new(remember_digest).is_password? remember_token
   end
@@ -50,5 +45,9 @@ class User < ApplicationRecord
     update_attribute :remember_digest, nil
   end
 
+  private 
 
+  def downcase_email
+    email.downcase!
+  end
 end
