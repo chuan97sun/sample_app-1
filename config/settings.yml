@@ -23,10 +23,12 @@ validations:
 
 collections:
   session_controller_create: 1
+  psword_reset_expired_time_in_hours: 2
   gravatar:  
     size:
       default: 80
       list: 50
+
 gravartar:
   size_default: 80
-  
+ 
