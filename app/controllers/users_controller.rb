@@ -8,7 +8,9 @@ class UsersController < ApplicationController
     @users = User.sort_by_name.page params[:page]
   end
 
-  def show; end
+  def show
+    @microposts = @user.microposts.paginate page: params[:page]
+  end
 
   def new
     @user = User.new
@@ -72,6 +74,7 @@ class UsersController < ApplicationController
 
 
   def correct_user
+    @user = User.find_by id: params[:id]
     redirect_to root_path unless current_user? @user
   end
 

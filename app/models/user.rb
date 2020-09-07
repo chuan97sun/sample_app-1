@@ -19,6 +19,8 @@ class User < ApplicationRecord
 
   has_secure_password
 
+  has_many :microposts, dependent: :destroy
+
   before_save :downcase_email
 
   class << self
@@ -59,6 +61,10 @@ class User < ApplicationRecord
 
   def send_password_reset_email
     UserMailer.password_reset(self).deliver_now
+  end
+
+  def feed
+    microposts
   end
 
   private 

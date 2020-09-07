@@ -25,6 +25,7 @@
 config/database.yml
 config/credentials.yml.enc
 test
+/storage
 
 config/settings.local.yml
 config/settings/*.local.yml
