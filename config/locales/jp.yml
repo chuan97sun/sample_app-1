@@ -103,6 +103,7 @@ jp:
       btn_signup: "New User ?"
       signup_now: "Sign Up Now!"
       remember_user: "Remember me in this computer"
+      forgot_password: " Forget Password?"
 
   user_mailer:
     account_activation:
