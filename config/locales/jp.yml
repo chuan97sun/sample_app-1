@@ -30,6 +30,7 @@ jp:
     home:
       home_title: "Home" 
       heading: "Welcome to the Sample App"
+      micropost_heading: "Micropost Feed"
       description_title: "This is the home page for the"
       description_detail: "sample application."
       sign_up: "Sign Up Now!"
@@ -90,6 +91,10 @@ jp:
     user:
       delete_link: "Delete"
       confirm: "You sure?"
+    show:
+      prefix_count: "Microposts"
+    logged_in_user:
+      login_reminder: "Please Log In"
     
   sessions:
     new:
@@ -123,3 +128,57 @@ jp:
   account_activations:
     success_mess_activation: "Success to activate account"
     fail_mess_activation: "INVALID activation"
+
+  password_resets:
+    create:
+      success_acct_sent: "Email sent with password reset instructions"
+      fail_acct_sent: "Email address not found"
+    update:
+      ps_not_empty: "Password cannot be empty."
+      success_psword_update: "Password has been reset."
+      fail_ps_reset_mess: "Password reset fail"
+    load_user:
+      fail_load_reset: "Password reset failed!"
+    valid_user:
+      fail_mess_ps_reset: "Password reset failed!"
+    check_expiration:
+      ps_expired_mess: "Password reset has expired."
+    edit:
+      heading: "Reset Password"
+      reset_title: "Reset password"
+    editform:
+      ps_reset_submit: "Update password"
+      confirmation: "Confirmation"
+    new:
+      fail_mess_create: "Password reset fail."
+      forgot_title: "Forgot pasword"
+      heading: "Forgot password"
+      forgot_submit: "Submit"
+
+  errors:
+    messages:
+      invalid_image_format: "must be a valid image format"
+      invalid_image_size: "should be less than 5 Mb"
+
+  shared:
+    micropost_form:
+      new_compose: "Compose new micropost..."
+      submit_post: "Post"
+      alert_mess: "Maximum file size is 5MB. Please choose a smaller file."
+    user_info:
+      profile_link: "view my profile"
+      suffix_count: micropost
+
+  microposts:
+    not_found: "Unable to find micropost"
+    create:
+      success_mess_created: "Micropost created!"
+      fail_mess_created: "Fail to create micropost!"
+    destroy:
+      success_mess_deleted: "Micropost deleted."
+      fail_mess_deleted: "Fail to delete micropost!"
+    micropost:
+      deleted_link: "Delete"
+      time_desc_a: "Posted"
+      time_desc_b: "ago."
+      deleted_confirm: "You sure?"
